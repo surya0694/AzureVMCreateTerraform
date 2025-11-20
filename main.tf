@@ -9,10 +9,10 @@ terraform {
 
 provider "azurerm" {
   features {}
-    subscription_id = "a8e950ce-d2ec-4dd8-b83c-fab54763ab26"
-    client_id       = "e991c861-6de1-461e-aaaa-05ddafc0d670"
-    tenant_id       = "23caf8b7-b317-43a6-8c08-869a32335cbe"
-    client_secret   = ""
+    subscription_id = "Subscription_id"
+    client_id       = "Client_id"
+    tenant_id       = "Client_id"
+    client_secret   = "Client_secret"
 }
 resource "azurerm_resource_group" "template" {
   name     = var.rg_name
@@ -65,5 +65,6 @@ resource "azurerm_windows_virtual_machine" "template" {
     sku       = "2016-Datacenter"
     version   = "latest"
   }
+
 
 }
